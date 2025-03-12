@@ -28,7 +28,7 @@ function TabContent({ title, content, className }: TabContentProps) {
         <h4 className="sm:text-large  text-4xl  text-secondary sm:leading-large font-bold">
           {title}
         </h4>
-        <Link
+        {/* <Link
           href=""
           className="max-w-[58px] hover:rotate-45 animation w-full bg-primary flex justify-center items-center aspect-square rounded-full h-[58px]"
         >
@@ -37,7 +37,7 @@ function TabContent({ title, content, className }: TabContentProps) {
             className="w-9 h-9  aspect-square"
             alt="arrow icon svg"
           />
-        </Link>
+        </Link> */}
       </div>
       <p ref={paraRef} className="max-w-[742px] text-secondary mx-auto">
         {content}

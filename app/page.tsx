@@ -1,5 +1,4 @@
 import {
-  Blog,
   DesignMarquee,
   Discuss,
   Experince,
@@ -23,7 +22,7 @@ export default function Home() {
       <Testimonials />
       <DesignMarquee />
       <Discuss />
-      <Blog />
+      {/* <Blog /> */}
     </>
   );
 }

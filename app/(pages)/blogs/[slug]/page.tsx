@@ -29,15 +29,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export async function generateStaticParams() {
-  const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:1337";
-  const path = `/api/blogs`;
-  const url = new URL(path, baseUrl);
-  const posts = await fetch(url.href).then((res) => res.json());
-  return posts.data.map((post: { slug: string }) => ({
-    slug: post.slug,
-  }));
-}
+// export async function generateStaticParams() {
+//   const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:1337";
+//   const path = `/api/blogs`;
+//   const url = new URL(path, baseUrl);
+//   const posts = await fetch(url.href).then((res) => res.json());
+//   return posts.data.map((post: { slug: string }) => ({
+//     slug: post.slug,
+//   }));
+// }
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:1337";

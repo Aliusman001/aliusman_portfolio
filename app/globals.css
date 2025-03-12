@@ -1,0 +1,325 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .animation {
+    @apply transition-all duration-100 ease-linear;
+  }
+  .custom-input {
+    @apply bg-transparent placeholder:text-[#F7F7F7] border-b py-3 border-[#F7F7F7] focus:outline-none  text-lg;
+  }
+}
+
+.card {
+  background-color: rgba(48, 48, 48, 0.352);
+  filter: blur(100%);
+  backdrop-filter: blur(100%);
+  clip-path: polygon(
+    0% 7.283%,
+    0% 7.283%,
+    0.116% 6.102%,
+    0.453% 4.981%,
+    0.993% 3.936%,
+    1.716% 2.982%,
+    2.605% 2.133%,
+    3.641% 1.405%,
+    4.807% 0.813%,
+    6.083% 0.371%,
+    7.452% 0.095%,
+    8.894% 0%,
+    91.106% 0%,
+    91.106% 0%,
+    92.548% 0.095%,
+    93.917% 0.371%,
+    95.193% 0.813%,
+    96.359% 1.405%,
+    97.395% 2.133%,
+    98.284% 2.982%,
+    99.007% 3.936%,
+    99.547% 4.981%,
+    99.884% 6.102%,
+    100% 7.283%,
+    100% 66.634%,
+    100% 66.634%,
+    99.884% 67.815%,
+    99.547% 68.936%,
+    99.007% 69.981%,
+    98.284% 70.935%,
+    97.395% 71.784%,
+    96.359% 72.512%,
+    95.193% 73.104%,
+    93.917% 73.546%,
+    92.548% 73.822%,
+    91.106% 73.917%,
+    85.589% 73.917%,
+    85.589% 73.917%,
+    82.871% 74.099%,
+    80.295% 74.623%,
+    77.897% 75.463%,
+    75.711% 76.587%,
+    73.772% 77.968%,
+    72.115% 79.577%,
+    70.775% 81.384%,
+    69.786% 83.36%,
+    69.185% 85.477%,
+    69.004% 87.705%,
+    69.094% 92.607%,
+    69.094% 92.607%,
+    68.998% 93.801%,
+    68.675% 94.937%,
+    68.145% 95.996%,
+    67.426% 96.965%,
+    66.538% 97.828%,
+    65.498% 98.568%,
+    64.326% 99.171%,
+    63.04% 99.621%,
+    61.659% 99.903%,
+    60.201% 100%,
+    8.894% 100%,
+    8.894% 100%,
+    7.452% 99.905%,
+    6.083% 99.629%,
+    4.807% 99.187%,
+    3.641% 98.595%,
+    2.605% 97.867%,
+    1.716% 97.018%,
+    0.993% 96.064%,
+    0.453% 95.019%,
+    0.116% 93.898%,
+    0% 92.717%,
+    0% 7.283%
+  );
+}
+.border-line {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%231D2939FF' stroke-width='2' stroke-dasharray='9' stroke-dashoffset='3' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+.dot {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%231D2939FF' stroke-width='2' stroke-dasharray='5' stroke-dashoffset='66' stroke-linecap='butt'/%3e%3c/svg%3e");
+  border-radius: 100px;
+}
+.dot::before {
+  content: "";
+  display: block;
+  background-color: rgb(253 133 58 / var(--tw-bg-opacity));
+  height: 36px;
+  width: 36px;
+  position: absolute;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);  
+}
+
+.testimonial::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("/testimonials/vector.svg");
+  right: -10px;
+  top: -30px;
+  height: 1.75rem;
+  width: 1.75rem;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Remove default arrows */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -5px !important;
+  position: absolute !important;
+  /* top: 20px !important; */
+  z-index: 999;
+}
+
+.swiper-pagination-bullet {
+  background-color: #cfcfcfff;
+  border-radius: 1.875rem !important;
+  height: 0.9375rem !important;
+  width: 0.9375rem !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--primary) !important;
+  width: 3.75rem !important;
+  border-radius: 1.875rem !important;
+  height: 0.9375rem !important;
+}
+.mySwiper {
+  padding-bottom: 55px !important;
+}
+
+.blog-card {
+  clip-path: polygon(
+    0% 8.565%,
+    0% 8.565%,
+    0.116% 7.176%,
+    0.453% 5.858%,
+    0.993% 4.629%,
+    1.716% 3.507%,
+    2.605% 2.509%,
+    3.641% 1.653%,
+    4.807% 0.956%,
+    6.083% 0.437%,
+    7.452% 0.112%,
+    8.894% 0%,
+    91.106% 0%,
+    91.106% 0%,
+    92.548% 0.112%,
+    93.917% 0.437%,
+    95.193% 0.956%,
+    96.359% 1.653%,
+    97.395% 2.509%,
+    98.284% 3.507%,
+    99.007% 4.629%,
+    99.547% 5.858%,
+    99.884% 7.176%,
+    100% 8.565%,
+    100% 65.353%,
+    100% 65.353%,
+    99.884% 66.742%,
+    99.547% 68.06%,
+    99.007% 69.289%,
+    98.284% 70.411%,
+    97.395% 71.409%,
+    96.359% 72.265%,
+    95.193% 72.961%,
+    93.917% 73.481%,
+    92.548% 73.805%,
+    91.106% 73.917%,
+    85.634% 73.917%,
+    85.634% 73.917%,
+    82.911% 74.131%,
+    80.331% 74.751%,
+    77.93% 75.741%,
+    75.742% 77.067%,
+    73.802% 78.696%,
+    72.145% 80.593%,
+    70.806% 82.723%,
+    69.821% 85.053%,
+    69.223% 87.548%,
+    69.05% 90.173%,
+    69.07% 91.283%,
+    69.07% 91.283%,
+    68.977% 92.691%,
+    68.657% 94.029%,
+    68.128% 95.278%,
+    67.41% 96.42%,
+    66.522% 97.437%,
+    65.482% 98.311%,
+    64.308% 99.022%,
+    63.021% 99.553%,
+    61.637% 99.885%,
+    60.177% 100%,
+    8.894% 100%,
+    8.894% 100%,
+    7.452% 99.888%,
+    6.083% 99.563%,
+    4.807% 99.044%,
+    3.641% 98.348%,
+    2.605% 97.491%,
+    1.716% 96.494%,
+    0.993% 95.371%,
+    0.453% 94.142%,
+    0.116% 92.824%,
+    0% 91.435%,
+    0% 8.565%
+  );
+}
+.rc-pagination-item,
+.rc-pagination-prev .rc-pagination-item-link,
+.rc-pagination-next .rc-pagination-item-link,
+.extra {
+  min-width: 51px !important; /* Increase the button width */
+  height: 51px !important; /* Increase the button height */
+  border-radius: 12px !important;
+  border: 1px solid #e7e7e7 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.rc-pagination-center {
+  align-items: center !important;
+}
+.rc-pagination {
+  font-size: x-large !important;
+}
+.rc-pagination-prev,
+.rc-pagination-next,
+.rc-pagination-jump-prev,
+.rc-pagination-jump-next {
+  height: auto !important;
+}
+.rc-pagination-prev button:after {
+  content: url("/common/leftArrow.svg") !important;
+  margin-top: 5px;
+}
+.rc-pagination-next button:after {
+  content: url("/common/rightArrow.svg") !important;
+  margin-top: 5px;
+}
+.rc-pagination-item-active {
+  font-weight: 500;
+  background-color: var(--primary) !important;
+}
+.rc-pagination-item-active.rc-pagination-item:hover a {
+  font-weight: 500;
+  color: white !important;
+}
+.rc-pagination-item a:hover {
+  color: var(--primary) !important;
+}
+.rc-pagination-item:hover {
+  border-color: var(--primary) !important;
+  transition: all 0.3s;
+}
+.rc-pagination-item:hover a {
+  color: var(--primary) !important;
+}
+
+.rc-pagination-item-active a {
+  color: white !important;
+}
+
+@media (max-width: 650px) {
+  .rc-pagination-item,
+  .rc-pagination-prev .rc-pagination-item-link,
+  .rc-pagination-next .rc-pagination-item-link,
+  .extra {
+    min-width: 30px !important; /* Increase the button width */
+    height: 30px !important; /* Increase the button height */
+    border-radius: 8px !important;
+    border: 1px solid #e7e7e7 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .rc-pagination {
+    font-size: small !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .rc-pagination-item,
+  .rc-pagination-prev .rc-pagination-item-link,
+  .rc-pagination-next .rc-pagination-item-link,
+  .extra {
+    min-width: 25px !important; /* Increase the button width */
+    height: 25px !important; /* Increase the button height */
+    border-radius: 5px !important;
+    border: 1px solid #e7e7e7 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .rc-pagination {
+    font-size: x-small !important;
+  }
+}

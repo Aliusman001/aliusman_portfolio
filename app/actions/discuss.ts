@@ -14,6 +14,7 @@ export default async function discuss(formData: FormData) {
 
         const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
         const apiEndpoint = `${baseUrl}/api/discuss`;
+        console.log(apiEndpoint)
 
         const response = await fetch(apiEndpoint, {
             method: 'POST',

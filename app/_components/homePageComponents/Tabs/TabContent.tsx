@@ -1,8 +1,8 @@
-import Image from "next/image";
-import upRight from "@/public/services/up-right.svg";
+// import Image from "next/image";
+// import upRight from "@/public/services/up-right.svg";
 import { useRef } from "react";
 import { useLineAnimation } from "@/app/hook";
-import Link from "next/link";
+// import Link from "next/link";
 
 interface TabContentProps {
   title: string;

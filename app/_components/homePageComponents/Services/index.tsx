@@ -1,7 +1,7 @@
 "use client";
 import gsap from "gsap";
-import frame from "@/public/Services/Frame.png";
-import frame2 from "@/public/Services/Frame2.png";
+import frame from "@/public/services/Frame.png";
+import frame2 from "@/public/services/Frame2.png";
 import Card from "./Card";
 import Content from "./Content";
 import BackgroundImages from "./BackgroundImages";

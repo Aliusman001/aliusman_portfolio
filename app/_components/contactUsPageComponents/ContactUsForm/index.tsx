@@ -14,7 +14,8 @@ import { useFormStatus } from "react-dom";
 gsap.registerPlugin(ScrollTrigger);
 
 function ContactUsForm() {
-  const formRef = useRef<HTMLDivElement>(null);
+  const divRef = useRef<HTMLDivElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const [errors, setErrors] = useState<Errors | null>();
 
   useEffect(() => {
@@ -59,17 +60,30 @@ function ContactUsForm() {
   }, []);
 
   return (
-    <div ref={formRef} className="bg-footer p-10  text-white rounded-3xl">
+    <div ref={divRef} className="bg-footer p-10  text-white rounded-3xl">
       <form
+        ref={formRef}
         action={async (formData: FormData) => {
           setErrors({});
           const data = await contactUsForm(formData);
+
           if (!data.success) {
             setErrors(data.errors);
           } else {
-            toast.success("Message send Successfully.");
+            toast.success("Message sent successfully.");
+            formRef.current?.reset(); // ✅ Reset the form fields
+            const checkboxes =
+              formRef.current?.querySelectorAll<HTMLInputElement>(
+                'input[type="checkbox"]'
+              );
+
+            checkboxes?.forEach((checkbox) => {
+              // Try changing the background color of the parent if needed
+              checkbox.style.backgroundColor = "transparent"; // Doesn't work on default checkboxes
+              checkbox.parentElement &&
+                (checkbox.parentElement.style.backgroundColor = "transparent");
+            });
           }
-          console.log(data);
         }}
       >
         <div className="flex mb-8 flex-col gap-5">
@@ -150,7 +164,7 @@ function FormButton() {
   return (
     <button
       disabled={pending}
-      className="bg-white group animation disabled:cursor-not-allowed text-black flex px-4 gap-2 py-3 rounded-full"
+      className="bg-white  disabled:bg-white/50 group animation disabled:cursor-not-allowed text-black flex px-4 gap-2 py-3 rounded-full"
     >
       <Image
         src={send}
